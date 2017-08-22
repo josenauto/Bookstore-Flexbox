@@ -1,18 +1,4 @@
 /* ================================= 
-  Base Styles
-==================================== */
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.row {
-  flex: 1;
-}
-
-/* ================================= 
   Media Queries
 ==================================== */
 
@@ -20,8 +6,7 @@ body {
 
 	.main-header,
 	.main-nav,
-	.row,
-  .col {
+	.row {
 		display: flex;
 	}
 
@@ -31,14 +16,17 @@ body {
 	}
 
 	.col {
-		flex: 1;
-    flex-direction: column;
+		flex: 1 50%;
 	}
 
-  .button {
-    margin-top: auto;
-    align-self: flex-start;
-  }
+	.row {
+		flex-wrap: wrap;
+	}
+
+
+	.secondary {
+		order: -1;
+	}
 
 }
 
@@ -47,6 +35,14 @@ body {
 	.main-header {
 		flex-direction: row;
 		justify-content: space-between;
+	}
+
+	.col {
+		flex-basis: 0;
+	}
+
+	.primary {
+		flex-grow: 1.4;
 	}
 
 }
